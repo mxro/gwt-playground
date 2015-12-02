@@ -2,8 +2,6 @@ package de.mxro.gwtplayground.internal;
 
 import org.timepedia.exporter.client.ExporterUtil;
 
-import com.google.gwt.core.client.GWT;
-
 public class PlaygroundEntryPoint {
 
     private final native void onLoad()/*-{
@@ -16,7 +14,7 @@ public class PlaygroundEntryPoint {
         ExporterUtil.exportAll();
         onLoad();
 
-        GWT.setUncaughtExceptionHandler(null);
+        // GWT.setUncaughtExceptionHandler(null);
 
         // GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
         //
