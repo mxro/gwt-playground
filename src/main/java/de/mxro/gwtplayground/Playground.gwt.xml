@@ -3,6 +3,7 @@
 <module rename-to='playground'>
 
 	<inherits name="com.google.gwt.core.Core" />
+	<inherits name='com.google.gwt.user.User' />
 	<inherits name="org.timepedia.exporter.Exporter" />
 	
 
@@ -22,7 +23,7 @@
 		value="true" />
 
 	<!-- Specify the paths for translatable code -->
-	<source path='internal' />
+	<source path='' />
 	
 	
 	<add-linker name="xsiframe" /> 

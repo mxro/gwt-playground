@@ -1,5 +1,7 @@
 package de.mxro.gwtplayground.internal;
 
+import org.timepedia.exporter.client.ExporterUtil;
+
 public class PlaygroundEntryPoint {
 
     private final native void onLoad()/*-{
@@ -8,7 +10,7 @@ public class PlaygroundEntryPoint {
                                       }-*/;
 
     public void onModuleLoad() {
-
+        ExporterUtil.exportAll();
         onLoad();
 
     }

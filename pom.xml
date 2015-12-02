@@ -117,7 +117,7 @@
 
 					<webappDirectory>${basedir}/src/main/webapp</webappDirectory>
 					
-					<extraJvmArgs>-Xms1500m -Xmx1500m</extraJvmArgs>
+					<extraJvmArgs>-Xms500m -Xmx500m</extraJvmArgs>
 				</configuration>
 
 
