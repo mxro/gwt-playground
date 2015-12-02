@@ -1,7 +1,5 @@
 package de.mxro.gwtplayground.internal;
 
-import delight.gwt.console.Console;
-
 import org.timepedia.exporter.client.ExporterUtil;
 
 import com.google.gwt.core.client.GWT;
@@ -23,7 +21,7 @@ public class PlaygroundEntryPoint {
 
             @Override
             public void onUncaughtException(final Throwable e) {
-                Console.log(e.toString());
+                // Console.log(e.toString());
                 throw new RuntimeException(e);
             }
 
