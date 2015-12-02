@@ -1,6 +1,11 @@
 package de.mxro.gwtplayground.internal;
 
+import delight.gwt.console.Console;
+
 import org.timepedia.exporter.client.ExporterUtil;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.GWT.UncaughtExceptionHandler;
 
 public class PlaygroundEntryPoint {
 
@@ -13,6 +18,16 @@ public class PlaygroundEntryPoint {
         // GWT.create(ExportTest.class);
         ExporterUtil.exportAll();
         onLoad();
+
+        GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
+
+            @Override
+            public void onUncaughtException(final Throwable e) {
+                Console.log(e.toString());
+                throw new RuntimeException(e);
+            }
+
+        });
 
     }
 
