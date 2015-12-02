@@ -3,6 +3,7 @@ package de.mxro.gwtplayground.internal;
 import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.ExportPackage;
 import org.timepedia.exporter.client.Exportable;
+import org.timepedia.exporter.client.ExporterUtil;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -26,6 +27,11 @@ public class ExportTest implements Exportable {
         // } catch (final Throwable t) {
         // throwError("Test");
         // }
+    }
+
+    @Export
+    public static JavaScriptObject wrap(final JavaScriptObject obj) {
+        return ExporterUtil.wrap(obj);
     }
 
     private final static native void throwError(String message)/*-{ 
