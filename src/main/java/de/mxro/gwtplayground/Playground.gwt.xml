@@ -7,6 +7,7 @@
 	<inherits name="org.timepedia.exporter.Exporter" />
 	<set-property name="export" value="yes" />
 	
+	<inherits name ='delight.gwt.console.Module' />
 
 	<!-- Specify the app entry point class. -->
 	<entry-point

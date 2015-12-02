@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<groupId>de.mxro.gwtplayground</groupId>
 	<artifactId>gwt-playground</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
@@ -8,7 +10,7 @@
 		<module.draftCompile>true</module.draftCompile>
 		<module.validateOnly>false</module.validateOnly>
 		<module.importedPackages>
-			
+
 			*
 		</module.importedPackages>
 		<module.exportedPackages>*
@@ -18,19 +20,25 @@
 	</properties>
 	<!-- Dependent Modules -->
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>de.mxro.thrd.gwtexporter250</groupId>
 			<artifactId>thrdGwtExporter250</artifactId>
 			<version>[0.0.1,)</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.mxro.thrd.gwtuser251</groupId>
 			<artifactId>thrdGWTUser251</artifactId>
 			<version>[0.0.1,)</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.javadelight</groupId>
+			<artifactId>delight-gwt-console</artifactId>
+			<version>[0.0.1,)</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-dev</artifactId>
@@ -110,13 +118,13 @@
 					<validateOnly>${module.validateOnly}</validateOnly>
 					<draftCompile>${module.draftCompile}</draftCompile>
 					<logLevel>INFO</logLevel> <!-- more detailed TRACE -->
-					<style>PRETTY</style> <!--   OR MORE: DETAILED -->
+					<style>PRETTY</style> <!-- OR MORE: DETAILED -->
 					<gwtVersion>${gwtVersion}</gwtVersion>
 
 					<hostedWebapp>${basedir}/src/main/webapp</hostedWebapp>
 
 					<webappDirectory>${basedir}/src/main/webapp</webappDirectory>
-					
+
 					<extraJvmArgs>-Xms500m -Xmx500m</extraJvmArgs>
 				</configuration>
 
@@ -170,8 +178,8 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<delete file="${basedir}/META-INF/MANIFEST.MF"/>
-								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF"/>
+								<delete file="${basedir}/META-INF/MANIFEST.MF" />
+								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
 							</tasks>
 						</configuration>
 					</execution>
@@ -184,7 +192,7 @@
 
 		<!-- RESOURCES -->
 		<resources>
-			
+
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/java</directory>
@@ -214,10 +222,10 @@
 			</resource>
 
 		</resources>
-		
+
 	</build>
 
-	
+
 
 
 </project>
