@@ -21,17 +21,17 @@ public class ExportTest implements Exportable {
 
     @Export
     public static void test() {
-        try {
-            throw new RuntimeException("Exception in method.");
-        } catch (final Throwable t) {
-            throwError(t);
-        }
+        // try {
+        throw new IllegalArgumentException("Exception in method.");
+        // } catch (final Throwable t) {
+        // throwError(ExporterUtil.wrap(t));
+        // }
     }
 
-    private final static native void throwError(Throwable t)/*-{ 
-                                                            $wnd.console.log(t);
-                                                            throw t;
-                                                            }-*/;
+    private final static native void throwError(JavaScriptObject t)/*-{ 
+                                                                   $wnd.console.log(t);
+                                                                   throw t;
+                                                                   }-*/;
 
     public ExportTest() {
         super();
