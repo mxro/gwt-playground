@@ -21,8 +21,17 @@ public class ExportTest implements Exportable {
 
     @Export
     public static void test() {
-        throw new RuntimeException("Exception in method.");
+        try {
+            throw new RuntimeException("Exception in method.");
+        } catch (final Throwable t) {
+            throwError(t);
+        }
     }
+
+    private final static native void throwError(Throwable t)/*-{ 
+                                                            $wnd.console.log(t);
+                                                            throw t;
+                                                            }-*/;
 
     public ExportTest() {
         super();
