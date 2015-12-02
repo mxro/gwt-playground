@@ -1,5 +1,10 @@
 package de.mxro.gwtplayground.internal;
 
+import delight.gwt.console.Console;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 import org.timepedia.exporter.client.ExporterUtil;
 
 import com.google.gwt.core.client.GWT;
@@ -23,6 +28,11 @@ public class PlaygroundEntryPoint {
 
             @Override
             public void onUncaughtException(final Throwable e) {
+
+                final StringWriter sw = new StringWriter();
+                final PrintWriter pw = new PrintWriter(sw);
+                e.printStackTrace(pw);
+                Console.log(sw.toString());
                 // Console.log(e.toString());
                 throw new RuntimeException(e);
             }
