@@ -34,11 +34,6 @@ public class ExportTest implements Exportable {
         return ExporterUtil.wrap(obj);
     }
 
-    private final static native void throwError(String message)/*-{ 
-                                                                  // $wnd.console.log(t);
-                                                                   throw message;
-                                                                   }-*/;
-
     public ExportTest() {
         super();
     }

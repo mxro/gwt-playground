@@ -30,11 +30,17 @@ public class PlaygroundEntryPoint {
 
                 Console.log(Arrays.toString(e.getStackTrace()));
                 // Console.log(e.toString());
-                throw new RuntimeException("Background excpetion", e);
+                // throw new RuntimeException("Background excpetion", e);
+                throwError(e.getMessage());
             }
 
         });
 
     }
+
+    private final static native void throwError(String message)/*-{ 
+                                                               // $wnd.console.log(t);
+                                                               throw message;
+                                                               }-*/;
 
 }
