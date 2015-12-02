@@ -10,10 +10,10 @@ import com.google.gwt.core.client.JavaScriptObject;
 @Export
 public class ExportTest implements Exportable {
 
-    // @Export
-    // public static void call(final JavaScriptObject func) {
-    // callFunc(func, null);
-    // }
+    @Export
+    public static void call(final JavaScriptObject func) {
+        callFunc(func, null);
+    }
 
     private final static native void callFunc(JavaScriptObject func, JavaScriptObject param)/*-{ 
                                                                                             func(param);
