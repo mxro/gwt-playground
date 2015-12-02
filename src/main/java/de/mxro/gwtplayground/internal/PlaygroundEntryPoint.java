@@ -1,6 +1,6 @@
 package de.mxro.gwtplayground.internal;
 
-import org.timepedia.exporter.client.ExporterUtil;
+import com.google.gwt.core.client.GWT;
 
 public class PlaygroundEntryPoint {
 
@@ -10,7 +10,8 @@ public class PlaygroundEntryPoint {
                                       }-*/;
 
     public void onModuleLoad() {
-        ExporterUtil.exportAll();
+        GWT.create(ExportTest.class);
+        // ExporterUtil.exportAll();
         onLoad();
 
     }
