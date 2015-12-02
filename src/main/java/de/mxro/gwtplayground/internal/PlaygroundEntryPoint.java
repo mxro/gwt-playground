@@ -30,7 +30,7 @@ public class PlaygroundEntryPoint {
 
                 Console.log(Arrays.toString(e.getStackTrace()));
                 // Console.log(e.toString());
-                throw new RuntimeException(e);
+                throw new RuntimeException("Background excpetion", e);
             }
 
         });
