@@ -40,7 +40,9 @@ public class PlaygroundEntryPoint {
 
     private final static native void throwError(String message)/*-{ 
                                                                // $wnd.console.log(t);
-                                                               throw message;
+                                                               var e = new Error(message);
+                                                               
+                                                               throw e;
                                                                }-*/;
 
 }
