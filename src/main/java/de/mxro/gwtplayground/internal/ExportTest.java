@@ -22,14 +22,14 @@ public class ExportTest implements Exportable {
     @Export
     public static void test() {
         // try {
-        throw new IllegalArgumentException("Exception in method.");
+        // throw new IllegalArgumentException("Exception in method.");
         // } catch (final Throwable t) {
-        // throwError(ExporterUtil.wrap(t));
+        throwError("Test");
         // }
     }
 
-    private final static native void throwError(JavaScriptObject t)/*-{ 
-                                                                   $wnd.console.log(t);
+    private final static native void throwError(String message)/*-{ 
+                                                                  // $wnd.console.log(t);
                                                                    throw t;
                                                                    }-*/;
 
