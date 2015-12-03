@@ -2,7 +2,7 @@
 <!-- used for Local tests -->
 <module rename-to='playground'>
 	
-	<inhertis name='io.nextweb.promise.js.NextwebPromiseJs'></inhertis>
+	<inherits name='io.nextweb.promise.js.NextwebPromiseJs'></inherits>
 	
 	<inherits name="com.google.gwt.core.Core" />
 	<inherits name='com.google.gwt.user.User' />
