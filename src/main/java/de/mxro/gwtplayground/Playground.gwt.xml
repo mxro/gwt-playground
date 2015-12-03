@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- used for Local tests -->
 <module rename-to='playground'>
-
+	
+	<inhertis name='io.nextweb.promise.js.NextwebPromiseJs'></inhertis>
+	
 	<inherits name="com.google.gwt.core.Core" />
 	<inherits name='com.google.gwt.user.User' />
 	<inherits name="org.timepedia.exporter.Exporter" />
