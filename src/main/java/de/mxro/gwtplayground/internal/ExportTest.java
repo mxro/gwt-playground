@@ -29,6 +29,7 @@ public class ExportTest implements Exportable {
         final Throwable javaException = ExceptionUtils.convertToJavaException(ex);
 
         Console.log(javaException.toString());
+        Console.log(ExceptionUtils.getStacktraceAsHtml(javaException));
     }
 
     @Export
