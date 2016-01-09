@@ -19,9 +19,9 @@ public class PlaygroundEntryPoint {
     public void onModuleLoad() {
         // GWT.create(ExportTest.class);
         ExporterUtil.exportAll();
-        onLoad();
+        // onLoad();
 
-        // GWT.setUncaughtExceptionHandler(null);
+        GWT.setUncaughtExceptionHandler(null);
 
         GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
 
