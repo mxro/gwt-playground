@@ -1,7 +1,5 @@
 package de.mxro.gwtplayground.internal;
 
-import delight.gwt.console.Console;
-
 import org.timepedia.exporter.client.ExporterUtil;
 
 import com.google.gwt.core.client.GWT;
@@ -35,7 +33,8 @@ public class PlaygroundEntryPoint {
         try {
             throwError("Hello!");
         } catch (final Throwable t) {
-            Console.log(t.getMessage());
+            throw new RuntimeException(t);
+            // Console.log(t.getMessage());
         }
 
     }
